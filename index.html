@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1424" />
+    <meta
+      name="description"
+      content="Aegis is a lightweight AI governance workspace for AI inventories, risk assessments, policy attestation, incident response, and approval trails."
+    />
+    <title>Aegis · AI governance workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='url(%23g)'/%3E%3Cpath d='M32 49s15-7.5 15-19V18l-15-6-15 6v12c0 11.5 15 19 15 19z' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m25 31 5 5 10-10' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/components.css" />
+    <link rel="stylesheet" href="./assets/responsive.css" />
+    <style>
+      .boot-screen {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 24px;
+        background: #f5f6fa;
+        color: #565c72;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        font-size: 14px;
+      }
+      .boot-screen .boot-mark {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: linear-gradient(140deg, #6366f1, #a855f7);
+        box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+      }
+      .boot-screen strong {
+        display: block;
+        color: #171a29;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+      }
+      .boot-screen span {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+      }
+      .no-script {
+        max-width: 560px;
+        margin: 80px auto;
+        padding: 24px;
+        border: 1px solid #e7e9f1;
+        border-radius: 14px;
+        background: #fff;
+        color: #565c72;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      .no-script h1 {
+        margin: 0 0 8px;
+        color: #171a29;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="boot-screen">
+        <span class="boot-mark" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 11 2 2 4-4" />
+          </svg>
+        </span>
+        <div>
+          <strong>Aegis</strong>
+          <span>Loading your governance workspace…</span>
+        </div>
+      </div>
+    </div>
+    <div id="modal-root"></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="false"></div>
+
+    <noscript>
+      <div class="no-script">
+        <h1>JavaScript is required</h1>
+        <p>Aegis is a browser-based workspace. Enable JavaScript, then reload this page to open the demo workspace.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
